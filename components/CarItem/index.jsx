@@ -1,5 +1,5 @@
 import React from "react";
-import { ImageBackground, Text, View } from "react-native";
+import { View, Text, ImageBackground } from "react-native";
 import StyledButton from "../StyledButton";
 import styles from "./styles";
 
@@ -9,11 +9,11 @@ const CarItem = (props) => {
   return (
     <View style={styles.carContainer}>
       <ImageBackground source={image} style={styles.image} />
+
       <View style={styles.titles}>
-        <Text style={styles.title}> {name}</Text>
+        <Text style={styles.title}>{name}</Text>
         <Text style={styles.subtitle}>
-          {tagline}{' '}
-          <Text style={styles.subtitleCTA}>{taglineCTA}</Text>
+          {tagline} <Text style={styles.subtitleCTA}>{taglineCTA}</Text>
         </Text>
       </View>
 
@@ -25,6 +25,7 @@ const CarItem = (props) => {
             console.warn("Custom Order was pressed");
           }}
         />
+
         <StyledButton
           type="secondary"
           content={"Existing Inventory"}
